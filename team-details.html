@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="team-details.js"></script>
+</head>
+<body>
+    <img id="teamImage" src="" />
+    <div class='tab-pane'>
+        <ul class="nav nav-tabs" data-bind="foreach: teamInfo">
+            <li data-bind="css: $index() == 0 ? 'active' : ''"><a data-toggle='tab' data-bind="html: Label, attr{ href: '#'+Label}"></a></li>
+        </ul>
+    </div>
+    
+    
+       <!-- <div data-bind="attr{id:Label}" class="tab-content">
+            <table class="table table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th colspan="2">Home</th>
+                        <th colspan="2">Away</th>
+                        <th>Match Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-bind="text: Matches.stage"></td>
+                        <td data-bind="text: Matches.home_team.team_long_name"></td>
+                        <td data-bind="text: Matches.home_team_goal"></td>
+                        <td data-bind="text: Matches.away_team_goal"></td>
+                        <td data-bind="text: Matches.away_team.team_long_name"></td>
+                        <td data-bind="text: Matches.date"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>-->
+</body>
+</html>
